@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Донаты</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #101820; color: #fff; }
+    h2 { color: #fdd835; }
+    button {
+      background-color: #fdd835;
+      color: #101820;
+      border: none;
+      padding: 12px 18px;
+      font-size: 16px;
+      margin: 10px 0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ffe955;
+    }
+  </style>
+</head>
+<body>
+  <h2>💳 Банковские карты</h2>
+  <button onclick="copyText('5536914080350097')">Скопировать TINKOFF</button><br>
+  <button onclick="copyText('4150960011976219')">Скопировать EVOCA BANK</button><br>
+
+  <h2>🪙 Криптовалюта</h2>
+  <button onclick="copyText('bc1q3dtaudrq9s960g6p22myzt9azd2ch2fh6')">Скопировать BTC</button><br>
+  <button onclick="copyText('0x09277ed73484ba3eb51a39729629c86a12')">Скопировать USDT (BNB)</button><br>
+  <button onclick="copyText('TEyVxBzDziGaB7NXCLV5VPKCwmuyPFRqcx')">Скопировать USDT (TRC20)</button><br>
+  <button onclick="copyText('0x09277ed73484ba3eb51a39729629c86a12')">Скопировать USDT (ERC20)</button><br>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Скопировано: ' + text);
+      });
+    }
+  </script>
+</body>
+</html>
